@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/emerald_200"
+    android:layout_marginBottom="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top_buttons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/emerald_200">
+
+            <ImageView
+                android:id="@+id/iv_product_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:src="@drawable/ic_gallery"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="64dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal"
+                android:layout_margin="12dp">
+
+                <ImageButton
+                    android:id="@+id/ib_edit"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_edit"
+                    android:background="@drawable/bg_circle"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerInside"
+                    android:padding="8dp"
+                    />
+
+                <ImageButton
+                    android:id="@+id/ib_delete"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_delete"
+                    android:background="@drawable/bg_circle"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerInside"
+                    android:padding="8dp"
+                    />
+
+                <ImageButton
+                    android:id="@+id/ib_share"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_sms"
+                    android:background="@drawable/bg_circle"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerInside"
+                    android:padding="8dp"
+                    />
+
+            </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/ib_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/ic_back"
+                android:background="@drawable/bg_circle"
+                android:backgroundTint="@color/white"
+                android:layout_margin="12dp"
+                android:scaleType="centerInside"
+                android:padding="8dp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_product_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl_top_buttons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:background="@color/rose_200">
+
+            <TextView
+                android:id="@+id/tv_product_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_product_price"
+                android:gravity="start"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:layout_constraintWidth_percent="0.6"
+                tools:text="8 Blade Stainless Steel Apple Slicer Corer Fruit Cutter Plastic Grip Handle" />
+
+            <TextView
+                android:id="@+id/tv_product_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_product_title"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="end"
+                app:layout_constraintWidth_percent="0.4"
+                tools:text="$ 0.20"
+                />
+
+            <TextView
+                android:id="@+id/tv_label_product_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_product_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:text="Description"
+                />
+
+            <TextView
+                android:id="@+id/tv_product_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_label_product_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:gravity="start"
+                android:ellipsize="end"
+                android:maxLines="10"
+                tools:text="The 8-Blade Stainless Steel Apple Slicer Corer Fruit Cutter with a Plastic Grip Handle is a kitchen essential that makes slicing and coring apples a breeze. With eight sharp stainless steel blades, it effortlessly cuts through apples, providing you with perfectly even slices and neatly removing the core. The comfortable plastic grip handle ensures a secure hold while using this handy tool. "
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mark_purchased"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cl_product_details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="start"
+            android:layout_margin="8dp"
+            android:background="@color/rose_200">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_mark_as_purchased"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark the item as bought"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/ll_mark_purchased"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="8dp"
+            android:background="@color/light_gray"/>
+
+        <TextView
+            android:id="@+id/tv_label_product_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:textColor="@color/rose_200"
+            android:text="See Location"
+            />
+
+
+        <fragment
+            android:id="@+id/fragment_map"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:background="@color/rose_200"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_product_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="8dp"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+
+
